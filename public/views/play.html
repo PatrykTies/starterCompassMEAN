@@ -1,0 +1,18 @@
+<div class="flip" ng-class='flipClass'>
+
+	<h1>{{title}}</h1>
+	Pytania : {{counter + 1}}
+	<form name="myForm" novalidate>
+
+		<h2 ng-model='quiz[counter]'>{{quiz[counter].q}}</h2>
+
+		<input id='answer' type="text" name="answer" placeholder="" ng-model='userAnswer'>
+
+		<a href="#/home" title="Quit">&times;</a>
+
+		<button class='btn' ng-click="incrementCounter()">Nastepne</button>
+		
+	</form>
+
+</div>
+<a class="fly btn-floating btn-large waves-effect waves-light red right"><i class="mdi-content-add"></i></a>	

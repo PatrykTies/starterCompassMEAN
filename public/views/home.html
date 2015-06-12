@@ -1,0 +1,23 @@
+
+<a class="fly btn-floating btn-large waves-effect waves-light red"><i class="mdi-content-add"></i></a>		
+
+<h1>{{title}}</h1>
+<p>Ilosc pytan: {{getTotal()}}</p>
+<ul>
+	<li ng-repeat="q in quiz">{{q.q}} | {{q.a}}</li>
+</ul>
+<form name='quizForm' accept-charset="utf-8" novalidate>
+	<div class="input-field">
+		<input type="text" id="pytanie" value="" required ng-model='formQ'>
+		<label for="pytanie">Wprowadz pytanie >></label>
+	</div>
+	<div class="input-field">
+		<input type="text" id="odpowiedz"  value="" required ng-model='formA'>
+		<label for="odpowiedz">Podaj odpowiedz >></label>
+	</div>
+	<button type="submit" class="btn" ng-click="addItem(formQ,formA)">Dodaj</button>
+	<button class="btn" ng-click="removeLast()">Usun</button>
+	<button class="btn" ng-click="clearList()">Wyczysc Liste</button>
+	<p><a href="#/play" title="Play">&gt;</a></p>
+</form>
+	

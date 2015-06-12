@@ -1,0 +1,274 @@
+body {
+  color: black;
+  background: white;
+}
+
+h5 {
+  color: black;
+}
+
+/*.ng-enter, .ng-leave.ng-leave-active{
+	opacity:0;
+}
+.ng-leave, .ng-enter.ng-enter-active{
+	opacity: 1;
+}
+.ng-enter{
+	transition: 1s all;
+}
+
+.ng-leave{
+	transition: .5s all;
+}
+*/
+.flip {
+  -webkit-transition: .5s;
+          transition: .5s;
+  margin-top: 0;
+}
+
+.flip-add {
+  margin-top: -50%;
+}
+
+/* ANIMATIONS
+============================================================================= */
+/* leaving animations ----------------------------------------- */
+/* rotate and fall */
+@-webkit-keyframes rotateFall {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  40% {
+    -webkit-transform: rotateZ(17deg);
+            transform: rotateZ(17deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(16deg);
+            transform: rotateZ(16deg);
+  }
+  100% {
+    -webkit-transform: translateY(100%) rotateZ(17deg);
+            transform: translateY(100%) rotateZ(17deg);
+  }
+}
+@keyframes rotateFall {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  20% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  40% {
+    -webkit-transform: rotateZ(17deg);
+            transform: rotateZ(17deg);
+  }
+  60% {
+    -webkit-transform: rotateZ(16deg);
+            transform: rotateZ(16deg);
+  }
+  100% {
+    -webkit-transform: translateY(100%) rotateZ(17deg);
+            transform: translateY(100%) rotateZ(17deg);
+  }
+}
+/* slide in from the bottom */
+@-webkit-keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+@keyframes slideOutLeft {
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+}
+/* rotate out newspaper */
+@-webkit-keyframes rotateOutNewspaper {
+  to {
+    -webkit-transform: translateZ(-3000px) rotateZ(360deg);
+            transform: translateZ(-3000px) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+@keyframes rotateOutNewspaper {
+  to {
+    -webkit-transform: translateZ(-3000px) rotateZ(360deg);
+            transform: translateZ(-3000px) rotateZ(360deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes rotateMove {
+  to {
+    -webkit-transform: translateY(200px) translateX(400px) rotateZ(360deg);
+            transform: translateY(200px) translateX(400px) rotateZ(360deg);
+  }
+}
+@keyframes rotateMove {
+  to {
+    -webkit-transform: translateY(200px) translateX(400px) rotateZ(360deg);
+            transform: translateY(200px) translateX(400px) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes rotateMoveback {
+  to {
+    -webkit-transform: translateY(-200px) translateX(-400px) rotateZ(360deg);
+            transform: translateY(-200px) translateX(-400px) rotateZ(360deg);
+  }
+}
+@keyframes rotateMoveback {
+  to {
+    -webkit-transform: translateY(-200px) translateX(-400px) rotateZ(360deg);
+            transform: translateY(-200px) translateX(-400px) rotateZ(360deg);
+  }
+}
+/* entering animations --------------------------------------- */
+/* scale up */
+@-webkit-keyframes scaleUp {
+  from {
+    opacity: 0.3;
+    -webkit-transform: scale(0.8);
+  }
+}
+@keyframes scaleUp {
+  from {
+    opacity: 0.3;
+    -webkit-transform: scale(0.8);
+  }
+}
+/* slide in from the right */
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/* slide in from the bottom */
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes slideInUp {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.ng-enter {
+  z-index: 8888;
+}
+
+.ng-leave {
+  z-index: 9999;
+}
+
+/* page specific animations ------------------------ */
+/* home -------------------------- */
+.page-home.ng-enter {
+  -webkit-animation: scaleUp 0.5s both ease-in;
+          animation: scaleUp 0.5s both ease-in;
+}
+
+.page-home.ng-leave {
+  -webkit-transform-origin: 0% 0%;
+      -ms-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-animation: rotateFall 1s both ease-in;
+          animation: rotateFall 1s both ease-in;
+}
+
+.page-home .fly {
+  -webkit-animation: rotateMove 1s both;
+          animation: rotateMove 1s both;
+}
+
+.page-play .fly {
+  -webkit-animation: rotateMoveback 1s both;
+          animation: rotateMoveback 1s both;
+}
+
+/* about ------------------------ MAKING PROBLEMS ON TABLET*/
+.page-play.ng-enter {
+  -webkit-animation: scaleUp 0.9s both ease-in;
+          animation: scaleUp 0.9s both ease-in;
+}
+
+.page-play.ng-leave {
+  -webkit-animation: slideOutLeft 0.5s both ease-in;
+          animation: slideOutLeft 0.5s both ease-in;
+}
+
+footer {
+  position: fixed;
+  top: 80%;
+  min-width: 100%;
+}
+
+.page {
+  bottom: 0;
+  padding-top: 100px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  margin-top: 60px;
+  margin-bottom: 8%;
+  width: 100%;
+  min-width: 100%;
+}
+
+.page h1 {
+  font-size: 60px;
+}
+
+.page a {
+  margin-top: 50px;
+}
+
+/* PAGES (specific colors for each page)
+============================================================================= */
+.page-home {
+  background: #00D0BC;
+  color: #00907c;
+}
+
+.page-play {
+  background: #E59400;
+  color: #a55400;
+}

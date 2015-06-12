@@ -1,0 +1,20 @@
+.page        {
+    bottom:0; 
+    padding-top:100px;
+    position:absolute; 
+    text-align:center;
+    top:0;
+    margin-top: 60px; 
+    margin-bottom: 8%; 
+    width:100%;
+    min-width:100%; 
+   
+}
+
+.page h1    { font-size:60px; }
+.page a     { margin-top:50px; }
+
+/* PAGES (specific colors for each page)
+============================================================================= */
+.page-home      { background:#00D0BC; color:#00907c; }
+.page-play     { background:#E59400; color:#a55400; }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app='myapp'>
+<head>
+	<base href="/"/>
+	<meta charset="utf-8">
+	<title>Quiz App</title>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/css/materialize.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/font/material-design-icons/Material-Design-Icons.woff2">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/font/roboto/Roboto-Light.woff2">
+	<link type="text" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/font/roboto/Roboto-Regular.woff2">
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+	<div>
+		<header ng-include="'views/header.html'">
+			
+		</header><!-- /header -->
+		<div class='page {{pageClass}}' ui-view>
+			
+		</div>
+		<footer ng-include="'views/footer.html'">
+			
+		</footer>
+	</div>
+	
+	
+
+
+
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.96.1/js/materialize.min.js"></script>
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular-animate.min.js"></script>
+	<!--<script type="text/javascript" src="js-dist/myapp.js"></script>-->
+	<script type="text/javascript" src="/myapp.js"></script>
+	<script type="text/javascript" src="/controllers/homeCtrl.js"></script>
+	<script type="text/javascript" src="/controllers/playCtrl.js"></script>
+	<script type="text/javascript" src="/js/init.js"></script>
+	
+</body>
+</html>
